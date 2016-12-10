@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XuM-Dz-G63" userLabel="Title Stack">
-                                <rect key="frame" x="54.5" y="28" width="266.5" height="50.5"/>
+                                <rect key="frame" x="27" y="28" width="266.5" height="50.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sawtooth Oscillator" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I60-ZZ-2Qi">
                                         <rect key="frame" x="25" y="0.0" width="216.5" height="30"/>
@@ -46,26 +46,32 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Yv-pI-wTB" userLabel="Main Function Stack">
-                                <rect key="frame" x="72" y="124" width="231" height="419"/>
+                                <rect key="frame" x="-37.5" y="124" width="395" height="320"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XL8-oy-yr3" userLabel="Play Main Freq Stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="231" height="110"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="395" height="96"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzy-90-oEx">
-                                                <rect key="frame" x="100.5" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="182.5" y="0.0" width="30" height="16.5"/>
                                                 <state key="normal" title="Play"/>
                                                 <connections>
                                                     <action selector="toggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0aC-NZ-eHy"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVq-BS-lIo">
-                                                <rect key="frame" x="54.5" y="40" width="122.5" height="30"/>
+                                                <rect key="frame" x="136.5" y="26.5" width="122.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZm-ic-ciE">
+                                                <rect key="frame" x="193.5" y="53" width="8" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.029999999999999999" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zPH-4K-tSd">
-                                                <rect key="frame" x="-2" y="80" width="235" height="31"/>
+                                                <rect key="frame" x="-2" y="79.5" width="399" height="17.5"/>
                                                 <connections>
                                                     <action selector="MainAmpSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jqg-1d-UOH"/>
                                                 </connections>
@@ -76,38 +82,51 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="271" axis="vertical" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m8s-Cj-dft" userLabel="Osc 1 Stack">
-                                        <rect key="frame" x="38" y="149.5" width="155" height="60.5"/>
+                                        <rect key="frame" x="38" y="116" width="319" height="45"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Osc 1 Amp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja3-uv-P3r">
-                                                <rect key="frame" x="30" y="0.0" width="95" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" text="Osc 1 Amp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja3-uv-P3r">
+                                                <rect key="frame" x="30" y="0.0" width="259" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-O0-tc0">
+                                                <rect key="frame" x="155.5" y="10" width="8" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-dh-E42">
-                                                <rect key="frame" x="6" y="30.5" width="143" height="31"/>
+                                                <rect key="frame" x="6" y="36.5" width="307" height="9.5"/>
                                                 <connections>
                                                     <action selector="Osc1AmpSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="2yQ-oi-Vrv"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="Ja3-uv-P3r" firstAttribute="top" secondItem="m8s-Cj-dft" secondAttribute="top" id="PXb-rr-0SO"/>
                                             <constraint firstItem="Ja3-uv-P3r" firstAttribute="leading" secondItem="m8s-Cj-dft" secondAttribute="leading" constant="30" id="ku3-fb-Cha"/>
                                             <constraint firstItem="QaJ-dh-E42" firstAttribute="leading" secondItem="m8s-Cj-dft" secondAttribute="leading" constant="8" id="wWc-gf-bJB"/>
                                         </constraints>
                                         <variation key="heightClass=regular-widthClass=regular" distribution="equalCentering"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bDI-ub-Gdm" userLabel="Osc 2 Stack">
-                                        <rect key="frame" x="17" y="249.5" width="197" height="60"/>
+                                        <rect key="frame" x="17" y="181" width="361" height="49.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Osc 2 Amp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdD-8P-blv">
-                                                <rect key="frame" x="30" y="0.0" width="137" height="30"/>
+                                                <rect key="frame" x="30" y="0.0" width="301" height="16.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNi-re-MeW">
+                                                <rect key="frame" x="178.5" y="16.5" width="4" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="V96-Xl-tcH">
-                                                <rect key="frame" x="6" y="30" width="185" height="31"/>
+                                                <rect key="frame" x="6" y="33" width="349" height="17.5"/>
                                                 <connections>
                                                     <action selector="Osc2AmpSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="8Z2-z1-ccM"/>
                                                 </connections>
@@ -116,19 +135,26 @@
                                         <constraints>
                                             <constraint firstItem="V96-Xl-tcH" firstAttribute="leading" secondItem="bDI-ub-Gdm" secondAttribute="leading" constant="8" id="EdL-ca-KTd"/>
                                             <constraint firstItem="IdD-8P-blv" firstAttribute="leading" secondItem="bDI-ub-Gdm" secondAttribute="leading" constant="30" id="Joh-zb-ZJQ"/>
+                                            <constraint firstItem="vNi-re-MeW" firstAttribute="leading" secondItem="V96-Xl-tcH" secondAttribute="trailing" constant="-174.5" id="fpx-7P-TFF"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wvy-SF-wXg" userLabel="Osc 3 Stack">
-                                        <rect key="frame" x="1" y="349" width="229" height="70"/>
+                                        <rect key="frame" x="1" y="250.5" width="393" height="69.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Osc 3 Amp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUD-JU-UnK">
-                                                <rect key="frame" x="30" y="0.0" width="169" height="30"/>
+                                                <rect key="frame" x="30" y="0.0" width="333" height="16.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVQ-E6-ahj">
+                                                <rect key="frame" x="192.5" y="26.5" width="8" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <slider opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-Y9-8me">
-                                                <rect key="frame" x="6" y="40" width="217" height="31"/>
+                                                <rect key="frame" x="6" y="53" width="381" height="17.5"/>
                                                 <connections>
                                                     <action selector="Osc3AmpSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="I6o-u9-unn"/>
                                                 </connections>
@@ -145,7 +171,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Written by BMarx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4c-hS-onW">
-                                <rect key="frame" x="217" y="638.5" width="142" height="20.5"/>
+                                <rect key="frame" x="162" y="539.5" width="142" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="ACv-81-Ptq"/>
                                 </constraints>
@@ -165,6 +191,12 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M4c-hS-onW" secondAttribute="bottom" constant="8" id="rKL-hG-icL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MainFreqOP" destination="gZm-ic-ciE" id="cLD-dB-yIq"/>
+                        <outlet property="Osc1AmpOP" destination="VW3-O0-tc0" id="yPA-vR-R3a"/>
+                        <outlet property="Osc2AmpOP" destination="vNi-re-MeW" id="95y-MI-Zse"/>
+                        <outlet property="Osc3AmpOP" destination="vVQ-E6-ahj" id="tzj-vH-1yO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

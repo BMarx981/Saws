@@ -18,7 +18,13 @@ class ViewController: UIViewController {
     var saw1 = AKOscillator(waveform: saw1Table)
     var saw2 = AKOscillator(waveform: saw2Table)
     var saw3 = AKOscillator(waveform: saw3Table)
+    let freqMultiplier = 880
 
+    @IBOutlet weak var MainFreqOP: UILabel!
+    @IBOutlet weak var Osc1AmpOP: UILabel!
+    @IBOutlet weak var Osc2AmpOP: UILabel!
+    @IBOutlet weak var Osc3AmpOP: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,25 +54,31 @@ class ViewController: UIViewController {
     
     //The main Volume slider
     @IBAction func MainAmpSlider(_ sender: UISlider) {
-        saw1.frequency = Double(sender.value * 880)
-        saw2.frequency = 1.5 * Double(sender.value * 880)
-        saw3.frequency = 2 * (Double(sender.value * 880))
+        
+        let a = sender.value
+        saw1.frequency = Double(a * freqMultiplier)
+        saw2.frequency = 1.5 * Double(a * freqMultiplier)
+        saw3.frequency = 2 * Double(a * freqMultiplier)
+        MainFreqOP.text = String(format: "%0.3f", saw1.frequency)
     }
     
     //The oscillators amplitudes
     //Osc 1 Amp
     @IBAction func Osc1AmpSlider(_ sender: UISlider) {
         saw1.amplitude = Double(sender.value)
+        Osc1AmpOP.text = String(format: "%0.3f", saw1.amplitude)
     }
     
     //Osc 2 Amp
     @IBAction func Osc2AmpSlider(_ sender: UISlider) {
         saw2.amplitude = Double(sender.value)
+        Osc2AmpOP.text = String(format: "%0.3f", saw2.amplitude)
     }
     
     //Osc 3 Amp
     @IBAction func Osc3AmpSlider(_ sender: UISlider) {
         saw3.amplitude = Double(sender.value)
+        Osc3AmpOP.text = String(format: "%0.3f", saw3.amplitude)
     }
 
     override func didReceiveMemoryWarning() {
